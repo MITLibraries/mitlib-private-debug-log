@@ -4,6 +4,10 @@
 # For use with the MIT Libraries' plugin template.
 # @link https://github.com/MITLibraries/wp-plugin-template
 
+# Declare what Travis environment should be used. Specifically, we need the
+# 'precise' environment rather than 'trusty' to get PHP 5.3.
+dist: precise
+
 # Declare project language.
 # @link http://about.travis-ci.org/docs/user/languages/php/
 language: php
