@@ -8,6 +8,10 @@ This is a small Wordpress plugin that moves the debug log outside the web root f
 
 The approach in this plugin was originally shared by [WebAware in a gist](https://gist.github.com/webaware/4969753), and in a [StackOverflow thread](https://wordpress.stackexchange.com/a/84171).
 
+## Installation
+
+When installing this plugin, you must first create - and set permissions for - the log file yourself. The plugin assumes that the file exists, and that it has permission to write to it. Defining the file location, and the needed permissions, are beyond the scope of this plugin. Check the details of your server, or ask your server administrator, for guidance.
+
 ## Configuration
 
 To use, edit the value of `$debuglog` to specify a path outside the server's web root. Enable the plugin, and make sure messages are being written. If you need to troubleshoot the plugin itself, you might find it easier to set to debug log to a different location temporarily:
@@ -16,4 +20,3 @@ To use, edit the value of `$debuglog` to specify a path outside the server's web
 $debuglog = WP_CONTENT_DIR . '/uploads';
 ```
 
-*Important* Please make sure the debug log exists, and that the file permissions are set correctly. The plugin is currently incapable of creating the log itself. Check the status of other log files in your chosen directory for guidance.
