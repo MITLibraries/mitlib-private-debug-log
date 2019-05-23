@@ -2,7 +2,7 @@
 /**
  * Plugin Name: MITlib Private Debug Log
  * Description: Enable debug log to a private folder not accessible from the web
- * Version: 0.0.1
+ * Version: 1.0.0
  * Author: MIT Libraries
  * Author URI: https://github.com/MITLibraries/mitlib-private-debug-log
  *
@@ -42,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * For production use, define $debuglog to be somewhere outside the web root.
  */
-$debuglog = '/var/log/httpd';
+$debuglog = '/var/log/httpd24';
 
 ini_set( 'log_errors', 1 );
 ini_set( 'error_log', $debuglog . '/debug.log' );
